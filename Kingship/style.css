@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at 10% 30%, rgba(210, 180, 140, 0.08), rgba(15, 15, 20, 0.98));
+    background-color: #0a0a0f;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1.5rem;
+}
+
+/* MAIN CARD — subtle liquid glass */
+.glass-card {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(22, 22, 30, 0.68);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 3rem;
+    border: 1px solid rgba(210, 180, 140, 0.25);
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.4), 0 0 0 0.5px rgba(210, 180, 140, 0.1) inset;
+    transition: all 0.3s ease;
+    padding: 2rem 1.8rem 2.5rem;
+}
+
+.glass-card:hover {
+    border-color: rgba(210, 180, 140, 0.45);
+    box-shadow: 0 30px 50px -15px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(210, 180, 140, 0.2) inset;
+    backdrop-filter: blur(14px);
+}
+
+/* LOGO AREA — clean placeholder for logo.png */
+.logo-wrapper {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+}
+
+.logo-img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    border-radius: 28px;
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.logo-img:hover {
+    transform: scale(1.02);
+}
+
+/* Clean placeholder when logo.png is missing */
+.logo-placeholder {
+    width: 130px;
+    height: 130px;
+    background: rgba(30, 30, 40, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 28px;
+    border: 2px dashed rgba(210, 180, 140, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.logo-placeholder i {
+    font-size: 2.5rem;
+    color: #c9a559;
+    opacity: 0.7;
+}
+
+.logo-placeholder span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #e9cf9b;
+    letter-spacing: 0.5px;
+}
+
+.logo-placeholder small {
+    font-size: 0.6rem;
+    color: #9a927c;
+}
+
+/* Brand title styling */
+.brand-title {
+    text-align: center;
+}
+
+.brand-title h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #f3e0b0, #d9b56a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.brand-title h1 span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #e9cf9b, #c9a559);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.thrive-badge {
+    display: inline-block;
+    background: rgba(201, 165, 89, 0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.4rem 1.2rem;
+    border-radius: 60px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #e9cf9b;
+    border: 0.5px solid rgba(201, 165, 89, 0.5);
+    margin-top: 0.6rem;
+    transition: transform 0.2s ease;
+}
+
+.tagline {
+    text-align: center;
+    margin: 1.2rem 0 1.8rem;
+    font-size: 0.95rem;
+    color: #ccd6e6;
+    font-weight: 400;
+    background: rgba(255, 255, 245, 0.04);
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    backdrop-filter: blur(2px);
+}
+
+/* SOCIAL LINKS */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(25, 25, 35, 0.6);
+    backdrop-filter: blur(4px);
+    border-radius: 80px;
+    padding: 0.65rem 1.2rem 0.65rem 0.9rem;
+    transition: all 0.25s ease;
+    border: 1px solid rgba(210, 180, 140, 0.2);
+    text-decoration: none;
+    color: #f2eee7;
+    font-weight: 500;
+    gap: 12px;
+}
+
+.social-link:hover {
+    background: rgba(45, 42, 55, 0.85);
+    border-color: rgba(210, 180, 140, 0.6);
+    transform: translateX(6px) scale(1.01);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.link-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+}
+
+.social-icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: all 0.2s;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.social-icon-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.platform-name {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+
+.arrow-icon {
+    color: #c9a559;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.social-link:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+/* OUR MISSION SECTION */
+.mission-section {
+    margin: 2rem 0 1.5rem;
+    padding: 1.2rem;
+    background: rgba(201, 165, 89, 0.08);
+    border-radius: 24px;
+    border: 1px solid rgba(210, 180, 140, 0.2);
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.mission-section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e9cf9b;
+    margin-bottom: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mission-section h3 i {
+    font-size: 1rem;
+    color: #d9b56a;
+}
+
+.mission-section p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #ccd6e6;
+    font-weight: 400;
+}
+
+/* Footer with copyright notice */
+.footer-note {
+    text-align: center;
+    margin-top: 0.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.footer-note span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    color: #9a927c;
+    letter-spacing: 0.3px;
+}
+
+.footer-note i {
+    font-size: 0.65rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .glass-card {
+        padding: 1.5rem;
+    }
+    .social-link {
+        padding: 0.55rem 1rem;
+    }
+    .platform-name {
+        font-size: 0.9rem;
+    }
+    .social-icon-img {
+        width: 36px;
+        height: 36px;
+    }
+    .logo-img {
+        width: 100px;
+        height: 100px;
+    }
+    .logo-placeholder {
+        width: 100px;
+        height: 100px;
+    }
+    .logo-placeholder i {
+        font-size: 2rem;
+    }
+    .brand-title h1 {
+        font-size: 1.5rem;
+    }
+    .thrive-badge {
+        font-size: 0.75rem;
+        padding: 0.3rem 1rem;
+    }
+    .mission-section {
+        padding: 1rem;
+    }
+    .mission-section p {
+        font-size: 0.8rem;
+    }
+}
